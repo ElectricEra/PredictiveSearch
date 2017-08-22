@@ -61,52 +61,54 @@
 
   <body>
     <div id="fields">
-    	<h1>Billing address</h1>
-    	<div>
-	      	<p>First name</p>
-      		<input id="name" type="text"/>
-    	</div>
-    	<div>
-	      	<p>Last name</p>
-      		<input id="surname" type="text"/>
-    	</div>
-    	<div>
-    		<select id="country" >
-    			<option id="uk">United Kingdom</option>
-    			<option id="de">Germany</option>
-    			<option id="es">Spain</option>
-    			<option id="pt">Portugal</option>
-    			<option id="ua">Ukraine</option>
-    		</select>
-      	</div>
-	    <div id="restField">
-		    <div>
-		    	<p>Address 1</p>
-	      		<input id="address" type="text"/>
-	    	</div>
-	      	<div>
-	      		<p>Address 2</p>
-	      		<input id="address-2" type="text"/>
-	    	</div>
-	      	<div class="two-column">
-	      		<div id="town-wrapper">
-		    		<p>Town/city</p>
-	      			<input id="town" type="text"/>
+    	<form>
+			<h1>Billing address</h1>
+			<div>
+				<p>First name</p>
+				<input id="name" type="text"/>
+			</div>
+			<div>
+				<p>Last name</p>
+				<input id="surname" type="text"/>
+			</div>
+			<div>
+				<select id="country" >
+					<option id="uk">United Kingdom</option>
+					<option id="de">Germany</option>
+					<option id="es">Spain</option>
+					<option id="pt">Portugal</option>
+					<option id="ua">Ukraine</option>
+				</select>
+			</div>
+			<div id="restField">
+				<div>
+					<p>Address 1</p>
+					<input id="address" type="text"/>
 				</div>
-				<div id="postcode-wrapper">
-		    		<p>Postcode</p>
-	      			<input id="postcode" type="text"/>
-	      		</div>
-	      	</div>
-	      	<div>
-		    	<p>County</p>
-	      		<input id="county" type="text"/>
-	      	</div>
-	      	<div>
-		    	<p>Number</p>
-	      		<input id="telephone" type="text"/>
-	      	</div>
-	      </div>
+				<div>
+					<p>Address 2</p>
+					<input id="address-2" type="text"/>
+				</div>
+				<div class="two-column">
+					<div id="town-wrapper">
+						<p>Town/city</p>
+						<input id="town" type="text"/>
+					</div>
+					<div id="postcode-wrapper">
+						<p>Postcode</p>
+						<input id="postcode" type="text"/>
+					</div>
+				</div>
+				<div>
+					<p>County</p>
+					<input id="county" type="text"/>
+				</div>
+				<div>
+					<p>Number</p>
+					<input id="telephone" type="text"/>
+				</div>
+			</div>
+	    </form>
     </div>
   	<div class="center" id="button-holder">
   		<button id="cancel">Cancel</button>
