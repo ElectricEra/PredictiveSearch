@@ -113,11 +113,13 @@
   		<button id="save">Save</button>
 	</div>
     <script>
-		var country = document.getElementById("country");
-		var address = document.getElementById("address");
-		var county = document.getElementById("county");
-		var postcode = document.getElementById("postcode");
-		var town = document.getElementById("town");
+    	const buttonHolder = document.getElementById("button-holder");
+
+		const country = document.getElementById("country");
+		const address = document.getElementById("address");
+		const county = document.getElementById("county");
+		const postcode = document.getElementById("postcode");
+		const town = document.getElementById("town");
 
 		buttonHolder.addEventListener('click', function(e) {
 			switch(e.target.id) {
