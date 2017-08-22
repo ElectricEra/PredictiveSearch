@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST!New!</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+		* { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+		h1 { text-align: center; }
+
+		#fields {
+			margin: auto;
+    		width: 524px;
+		}
+
+		.center {
+			margin: auto;
+			width: 600px;
+		}
+
+		input, select {
+			width: 524px;
+			height: 40px;
+			font-size: 16px;
+			margin: 0 auto 30px;
+			border: none;
+			border-bottom: 1px solid lightgrey;
+		}
+
+		#town, #postcode { width: 250px; }
+
+		#town-wrapper, #postcode-wrapper {
+			display: inline-block;
+			width: 250px;	
+		}
+
+		#town-wrapper { margin-right: 20px; }
+
+		button {
+			width: 280px;
+			border: 6px solid lightgrey;
+			text-align: center;
+			background: white;
+			font-size: 24px;
+			height: 64px;
+			line-height: 2;
+			margin: 9px;
+		}
+
+		#save { border-color: lightgreen; }
+
+		p {
+			font-size: 12px;
+			color: grey;
+		}
+
+    </style>
+  </head>
+
+  <body>
+    <div id="fields">
+    	<h1>Billing address</h1>
+    	<div>
+	      	<p>First name</p>
+      		<input id="name" type="text"/>
+    	</div>
+    	<div>
+	      	<p>Last name</p>
+      		<input id="surname" type="text"/>
+    	</div>
+    	<div>
+    		<select id="country" >
+    			<option id="uk">United Kingdom</option>
+    			<option id="de">Germany</option>
+    			<option id="es">Spain</option>
+    			<option id="pt">Portugal</option>
+    			<option id="ua">Ukraine</option>
+    		</select>
+      	</div>
+	    <div id="restField">
+		    <div>
+		    	<p>Address 1</p>
+	      		<input id="address" type="text"/>
+	    	</div>
+	      	<div>
+	      		<p>Address 2</p>
+	      		<input id="address-2" type="text"/>
+	    	</div>
+	      	<div class="two-column">
+	      		<div id="town-wrapper">
+		    		<p>Town/city</p>
+	      			<input id="town" type="text"/>
+				</div>
+				<div id="postcode-wrapper">
+		    		<p>Postcode</p>
+	      			<input id="postcode" type="text"/>
+	      		</div>
+	      	</div>
+	      	<div>
+		    	<p>County</p>
+	      		<input id="county" type="text"/>
+	      	</div>
+	      	<div>
+		    	<p>Number</p>
+	      		<input id="telephone" type="text"/>
+	      	</div>
+	      </div>
+    </div>
+  	<div class="center" id="button-holder">
+  		<button id="cancel">Cancel</button>
+  		<button id="save">Save</button>
+	</div>
+    <script>
+		var country = document.getElementById("country");
+		var address = document.getElementById("address");
+		var county = document.getElementById("county");
+		var postcode = document.getElementById("postcode");
+		var town = document.getElementById("town");
+
+		buttonHolder.addEventListener('click', function(e) {
+			switch(e.target.id) {
+				case 'save':
+					collectData();
+					break;
+				case 'cancel':
+					removeData();
+					break;
+				default:
+					break;
+			}
+		})
+
+		function collectData() {
+			console.log(
+`Collected data: 
+country:${country.options[country.selectedIndex].value}
+address:${address.value}
+county:${county.value}
+postcode:${postcode.value}
+town:${town.value}
+`);
+		}
+
+		function removeData() {
+			console.log("remove data");
+		}
+    </script>
+  </body>
+</html>
