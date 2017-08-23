@@ -131,7 +131,13 @@
 
 		document.addEventListener("populate", function() {
 			console.log(1);
-		})
+		});
+
+		pca.on("load", function (type, id, control) {
+            control.listen("populate", function (address) {
+                    console.log("2");
+            });
+        });
 
 		function collectData() {
 			console.log(
