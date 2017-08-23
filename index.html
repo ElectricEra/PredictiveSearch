@@ -55,6 +55,10 @@
 			color: grey;
 		}
 
+		.hidden-field {
+			display: none;
+		}
+
     </style>
     <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PERSN19995",host:"PERSN19995.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PERSN19995.pcapredict.com/js/sensor.js")</script>
   </head>
@@ -69,7 +73,7 @@
     				<input id="search-address" type="text" />
     			</div>
     		</div>
-			<div class="hidden-field">
+			<div id="rest-fields" class="hidden-field">
 				<div>
 					<p>Address 1</p>
 					<input id="address" type="text"/>
@@ -116,6 +120,8 @@
 		const postcode = document.getElementById("postcode");
 		const town = document.getElementById("town");
 
+		const restFields = document.getElementById("rest-fields");
+
 		buttonHolder.addEventListener('click', function(e) {
 			switch(e.target.id) {
 				case 'save':
@@ -128,10 +134,6 @@
 					break;
 			}
 		})
-
-		document.addEventListener("populate", function() {
-			console.log(1);
-		});
 
 		pca.on("load", function (type, id, control) {
             control.listen("populate", function (address) {
@@ -151,7 +153,7 @@ town:${town.value}
 		}
 
 		function removeData() {
-			console.log("remove data");
+			restFields.className = "";
 		}
     </script>
   </body>
