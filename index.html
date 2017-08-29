@@ -134,7 +134,7 @@
 		}
 
     </style>
-    <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PERSN19995",host:"PERSN19995.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PERSN19995.pcapredict.com/js/sensor.js")</script>
+    <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PHOTO11127",host:"PHOTO11127.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PHOTO11127.pcapredict.com/js/sensor.js")</script>
   </head>
 
   <body>
@@ -238,17 +238,11 @@
         });
 
 		function collectData() {
-			console.log(
-`Collected data: 
-country:${country.options[country.selectedIndex].value}
-address:${address.value}
-county:${county.value}
-postcode:${postcode.value}
-town:${town.value}
-`);
+			console.log("Collecting data!")
 		}
 
 		function removeData() {
+			console.log("Removing data!")
 			restFields.className = "";
 		}
     </script>
