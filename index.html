@@ -4,8 +4,6 @@
     <title>Predictive search</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="https://services.postcodeanywhere.co.uk/css/address-3.50.css" />
-    <script type="text/javascript" src="https://services.postcodeanywhere.co.uk/js/address-3.50.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <style>
 		* { box-sizing: border-box; margin: 0px; padding: 0px; font-family: 'Poppins', sans-serif; position: relative; }
@@ -194,34 +192,6 @@
 			</div>
 	    </form>
     </div>
-
-	
-	<div class="section">
-        <div class="header">
-            Delivery Details
-        </div>
-        <div class="fieldset">
-            <label for="test-line1">Address</label>
-            <input id="test-line1" type="text" placeholder="Start typing your address" autofocus="" />
-
-            <label for="test-line2"></label>
-            <input id="test-line2" type="text" placeholder="" />
-
-            <label for="test-city"></label>
-            <input id="test-city" type="text" placeholder="City" />
-
-            <label for="test-state"></label>
-            <input id="test-state" type="text" placeholder="State/Province" />
-
-            <label for="test-postcode"></label>
-            <input id="test-postcode" type="text" placeholder="Zip/Postal Code" />
-
-            <label for="test-country"></label>
-            <input id="test-country" type="text" placeholder="Country" />
-        </div>
-    </div>
-
-
   	<div class="center" id="button-holder">
   		<button id="cancel">Cancel</button>
   		<button id="save">Save</button>
@@ -259,19 +229,6 @@
 					break;
 			}
 		})
-
-		var fields = [
-            { element: "test-line1", field: "Line1" },
-            { element: "test-line2", field: "Line2", mode: pca.fieldMode.POPULATE },
-            { element: "test-city", field: "City", mode: pca.fieldMode.POPULATE },
-            { element: "test-state", field: "ProvinceName", mode: pca.fieldMode.POPULATE },
-            { element: "test-postcode", field: "PostalCode" },
-            { element: "test-country", field: "CountryName", mode: pca.fieldMode.COUNTRY }
-        ],
-        options = {
-            key: "AN68-UU99-PZ13-DT89"
-        },
-        control = new window.pca.Address(fields, options);
 
 		pca.on("load", function (type, id, control) {
             control.listen("populate", function (address) {
