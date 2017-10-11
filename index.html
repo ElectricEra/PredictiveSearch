@@ -230,10 +230,9 @@
 					break;
 			}
 		})
-
-		
+	
         var fields = [
-            { element: "address", field: "Line1" },
+            { element: "search-address", field: "Line1" },
             { element: "town", field: "City", mode: pca.fieldMode.POPULATE },
             { element: "county", field: "ProvinceName", mode: pca.fieldMode.POPULATE },
             { element: "postcode", field: "PostalCode" },
@@ -243,7 +242,6 @@
             key: "AN68-UU99-PZ13-DT89"
         },
         control = new pca.Address(fields, options);
-        
 
 		pca.on("load", function (type, id, control) {
             control.listen("populate", function (address) {
