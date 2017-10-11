@@ -134,8 +134,9 @@
 		}
 
     </style>
-    <script>(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"PHOTO11127",host:"PHOTO11127.pcapredict.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//PHOTO11127.pcapredict.com/js/sensor.js")</script>
-  </head>
+    <link rel="stylesheet" type="text/css" href="http://services.postcodeanywhere.co.uk/css/address-3.50.css" />
+    <script type="text/javascript" src="http://services.postcodeanywhere.co.uk/js/address-3.50.js"></script>
+    </head>
 
   <body>
   	<header>
@@ -229,6 +230,20 @@
 					break;
 			}
 		})
+
+		
+        var fields = [
+            { element: "address", field: "Line1" },
+            { element: "town", field: "City", mode: pca.fieldMode.POPULATE },
+            { element: "county", field: "ProvinceName", mode: pca.fieldMode.POPULATE },
+            { element: "postcode", field: "PostalCode" },
+            { element: "country", field: "CountryName", mode: pca.fieldMode.COUNTRY }
+        ],
+        options = {
+            key: "AN68-UU99-PZ13-DT89"
+        },
+        control = new pca.Address(fields, options);
+        
 
 		pca.on("load", function (type, id, control) {
             control.listen("populate", function (address) {
